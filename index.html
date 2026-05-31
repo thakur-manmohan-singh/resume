@@ -3,9 +3,487 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manmohan Singh</title>
+    <title>Manmohan Singh - Full Stack Developer & AI Enthusiast</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .title {
+            font-size: 1.2em;
+            font-weight: 300;
+            margin-bottom: 15px;
+            opacity: 0.95;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 0.95em;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Main Content */
+        main {
+            padding: 30px;
+        }
+
+        section {
+            margin-bottom: 28px;
+        }
+
+        h2 {
+            font-size: 1.4em;
+            color: #667eea;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #667eea;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: 1.1em;
+            color: #2c3e50;
+            margin-top: 12px;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .company {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 1em;
+        }
+
+        .date {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            font-style: italic;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 12px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            line-height: 1.7;
+        }
+
+        /* Summary Section */
+        .summary {
+            background: #f0f4ff;
+            padding: 15px 20px;
+            border-left: 4px solid #667eea;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 3px solid #667eea;
+        }
+
+        .skill-category strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1em;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background: #667eea;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        /* Project Section */
+        .project {
+            background: #fafbfc;
+            padding: 18px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.2s ease;
+        }
+
+        .project:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+        }
+
+        .project-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .project-name {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .project-link {
+            color: #667eea;
+            font-size: 0.9em;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Education Section */
+        .education-item {
+            margin-bottom: 18px;
+        }
+
+        .degree {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .school {
+            color: #667eea;
+            font-weight: 500;
+        }
+
+        .gpa, .duration {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        /* Certifications */
+        .certification {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .certification-name {
+            font-weight: 500;
+            color: #2c3e50;
+        }
+
+        .certification-issuer {
+            color: #667eea;
+            font-size: 0.9em;
+        }
+
+        .year {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+            }
+
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+
+            header {
+                padding: 25px 20px;
+            }
+
+            main {
+                padding: 20px;
+            }
+
+            section {
+                page-break-inside: avoid;
+            }
+
+            .project:hover {
+                transform: none;
+                box-shadow: none;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            header {
+                padding: 25px 15px;
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            main {
+                padding: 20px 15px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .job-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Manmohan Singh Engineer</h1>
+    <div class="container">
+        <header>
+            <h1>Manmohan Singh</h1>
+            <div class="title">Full Stack Developer | AI Enthusiast | Software Engineer</div>
+            <div class="contact-info">
+                <span>📧 manmohansingh10032004@gmail.com</span>
+                <span>📍 Mathura, India</span>
+                <span>💼 GitHub | LinkedIn</span>
+            </div>
+        </header>
+
+        <main>
+            <!-- Summary Section -->
+            <section>
+                <h2>Professional Summary</h2>
+                <div class="summary">
+                    B.Tech Computer Science (AI & ML) student at GLA University with hands-on experience in full-stack development, AI-driven platforms, and workflow automation. Skilled in Java, Python, and JavaScript, with strong foundation in data structures, algorithms, and object-oriented programming. Experienced in building secure, scalable, and real-time applications. Recognized for problem-solving, quick learning, and collaborative teamwork.
+                </div>
+            </section>
+
+            <!-- Technical Skills Section -->
+            <section>
+                <h2>Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <strong>Programming Languages</strong>
+                        <div class="skills-list">
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <strong>Frontend Development</strong>
+                        <div class="skills-list">
+                            <span class="skill-tag">React.js</span>
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <strong>Backend Development</strong>
+                        <div class="skills-list">
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Express.js</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <strong>Databases</strong>
+                        <div class="skills-list">
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">MySQL</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <strong>Core Competencies</strong>
+                        <div class="skills-list">
+                            <span class="skill-tag">Artificial Intelligence</span>
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">REST APIs</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <strong>Tools & Platforms</strong>
+                        <div class="skills-list">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">Postman</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section>
+                <h2>Featured Projects</h2>
+
+                <div class="project">
+                    <div class="project-title">
+                        <div class="project-name">Zentest - Secure Examination Platform</div>
+                        <a href="https://zentest-ai.netlify.app" class="project-link">zentest-ai.netlify.app</a>
+                    </div>
+                    <ul>
+                        <li>Developed a secure web-based examination platform featuring student login, question management, and result tracking</li>
+                        <li>Implemented JWT authentication and encrypted storage, eliminating manual grading errors</li>
+                        <li>Enabled 50+ students to take exams remotely with real-time result generation</li>
+                        <li>Technologies: React.js, Node.js, MongoDB, JWT Authentication</li>
+                    </ul>
+                </div>
+
+                <div class="project">
+                    <div class="project-title">
+                        <div class="project-name">ZenLab - Code Editor & Execution Platform</div>
+                        <a href="https://zenlabbeta.netlify.app" class="project-link">zenlabbeta.netlify.app</a>
+                    </div>
+                    <ul>
+                        <li>Developed a React-based code editor with live preview and Node.js backend for sandboxed execution</li>
+                        <li>Enhanced security and reliability by isolating user code execution in sandboxed environments</li>
+                        <li>Supports multi-language evaluation including JavaScript, Python, and Java</li>
+                        <li>Technologies: React.js, Node.js, Docker (Sandbox), Express.js</li>
+                    </ul>
+                </div>
+
+                <div class="project">
+                    <div class="project-title">
+                        <div class="project-name">Toolmate - AI-Driven Workflow Automation</div>
+                        <a href="https://toolmate.streamlit.app" class="project-link">toolmate.streamlit.app</a>
+                    </div>
+                    <ul>
+                        <li>Created an AI-driven workflow automation platform that converts natural language instructions into executable workflows</li>
+                        <li>Designed scalable architecture supporting plugin integration, team collaboration, and workflow marketplace</li>
+                        <li>Implemented intelligent task parsing and execution engine for workflow automation</li>
+                        <li>Technologies: Python, Streamlit, AI/ML, REST APIs</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section>
+                <h2>Education</h2>
+                <div class="education-item">
+                    <div class="degree">Bachelor of Technology (B.Tech) - Computer Science</div>
+                    <div class="school">GLA University, Mathura</div>
+                    <div>
+                        <span class="duration">August 2022 – Present</span>
+                    </div>
+                    <div style="color: #667eea; margin-top: 5px; font-weight: 500;">Specialization: Artificial Intelligence & Machine Learning</div>
+                </div>
+            </section>
+
+            <!-- Certifications & Training -->
+            <section>
+                <h2>Certifications & Training</h2>
+                
+                <div class="certification">
+                    <div>
+                        <div class="certification-name">Full Stack Web Development</div>
+                        <div class="certification-issuer">freeCodeCamp</div>
+                    </div>
+                    <div class="year">2024</div>
+                </div>
+
+                <div class="certification">
+                    <div>
+                        <div class="certification-name">Java Programming</div>
+                        <div class="certification-issuer">Coursera</div>
+                    </div>
+                    <div class="year">2024</div>
+                </div>
+
+                <div class="certification">
+                    <div>
+                        <div class="certification-name">AI for Everyone</div>
+                        <div class="certification-issuer">Coursera (Andrew Ng)</div>
+                    </div>
+                    <div class="year">2024</div>
+                </div>
+            </section>
+
+            <!-- Core Concepts Section -->
+            <section>
+                <h2>Expertise Areas</h2>
+                <ul>
+                    <li><strong>Full-Stack Development:</strong> Building end-to-end web applications from frontend UI to backend APIs and databases</li>
+                    <li><strong>Security Implementation:</strong> JWT authentication, data encryption, secure code execution sandboxing</li>
+                    <li><strong>AI & Machine Learning:</strong> Building intelligent systems, workflow automation, natural language processing</li>
+                    <li><strong>Scalable Architecture:</strong> Designing systems for plugin integration, marketplace platforms, real-time collaboration</li>
+                    <li><strong>Problem Solving:</strong> Algorithm design, data structure optimization, architectural decision-making</li>
+                    <li><strong>Software Engineering:</strong> Clean code practices, version control, API design, testing strategies</li>
+                </ul>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
